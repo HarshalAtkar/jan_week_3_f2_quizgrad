@@ -189,6 +189,7 @@ const startsolving=document.querySelector(".startsolving");
   const start_quiz=document.querySelector(".start_quiz");
   const herosection=document.querySelector(".herosection");
   const questions=document.querySelector(".questions");
+  const options_container=document.querySelector(".options_container");
 
 startsolving.addEventListener("click",()=>{
     choosetopiccontainer.classList.remove("none")
@@ -204,6 +205,8 @@ start_quiz.addEventListener("click",()=>{
     const topic=document.createElement('div');
     topic.innerText=item.category;
     topic.classList.add("topic_name");
+    topic.id=item.category;
+
     
     const cancalbutton=document.createElement('div');
     cancalbutton.classList.add("cancal_topic");
@@ -214,3 +217,38 @@ start_quiz.addEventListener("click",()=>{
     tagcontainer.appendChild(topic);
 
   })
+
+
+  let choose_subject=[];
+ 
+quizData.forEach((item)=>{
+    const question=document.createElement('div');
+    const option1=document.createElement('div');
+    const option2=document.createElement('div');
+    const option3=document.createElement('div');
+    const option4=document.createElement('div');
+    item.question=innerText=item.questions.forEach((item)=>{
+        question.innerText=item.question;
+        question.classList.add("question");
+
+        // questions.appendChild(question);
+        questions.insertBefore(question, questions.firstChild)
+
+        option1.classList.add("option");
+
+        option1.innerText=item.options;
+        option1.classList.add("option");
+        option2.innerText=item.options;
+        option3.innerText=item.options;
+        option4.innerText=item.options;
+
+
+        options_container.appendChild(option1);
+        options_container.appendChild(option2);
+        options_container.appendChild(option3);
+        options_container.appendChild(option4);
+    });
+
+
+    
+})

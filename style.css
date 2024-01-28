@@ -82,7 +82,7 @@ section > h1 {
   width: 100%;
   top: 0px;
   right: 0px;
-  background-color:transperent;
+  background: rgba(0, 0, 0, 0.50);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,9 +91,9 @@ section > h1 {
 }
 .choosetopic {
   border-radius: 20px;
- height: 60%;
+ height: 70%;
  width: 70%;
- background-color: #fbe18f;
+ background-color: #ffffff;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -102,7 +102,9 @@ section > h1 {
   /* position: absolute; */
 }
 .close_topic {
-  
+position: static;
+top: 0px;
+right: 0px;
  
 }
 .topic_name {
@@ -145,12 +147,22 @@ section > h1 {
 
 }
 .question{
+  display: flex;
+  justify-content: center;
+  align-items: center;
     background-color: #fcc822;
+    width:100%;
+    padding-inline: 50px;
+    height: 50px;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .option{
-
+height:20px;
  background-color: #fcc822;
  margin: 20px;
+ border: 2px solid black;
 }
 .options_container{
    
